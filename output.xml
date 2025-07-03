@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-07-03T18:07:11.156348" rpa="false" schemaversion="5">
+<suite id="s1" name="Case01-Login" source="c:\Users\melge\Documents\Mobile_RobotFramework\Scenario01-Login\Case01-Login.robot">
+<test id="s1-t1" name="Login With Valid Credentials" line="19">
+<kw name="Open App" owner="keywords" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>&amp;{CAPS}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-07-03T18:07:12.591397" elapsed="68.435039"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:07:12.589101" elapsed="71.158424"/>
+</kw>
+<kw name="Fill Login Fields" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-07-03T18:08:28.606739" level="INFO">xpath criteria: (//android.widget.EditText)[1]</msg>
+<arg>${DEALER_CODE_FIELD}</arg>
+<arg>5s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-07-03T18:08:24.634682" elapsed="4.202710"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-07-03T18:08:29.069986" level="INFO">xpath criteria: (//android.widget.EditText)[2]</msg>
+<arg>${EMAIL_FIELD}</arg>
+<arg>5s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-07-03T18:08:28.838446" elapsed="0.231939"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-07-03T18:08:29.392702" level="INFO">xpath criteria: (//android.widget.EditText)[3]</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>5s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-07-03T18:08:29.071309" elapsed="0.321800"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-07-03T18:08:29.406012" level="INFO">Clicking element 'xpath=(//android.widget.EditText)[1]'.</msg>
+<msg time="2025-07-03T18:08:29.956574" level="INFO">xpath criteria: (//android.widget.EditText)[1]</msg>
+<arg>${DEALER_CODE_FIELD}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-07-03T18:08:29.401428" elapsed="0.555616"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-07-03T18:08:29.967903" level="INFO">Typing text 'LBD001' into text field 'xpath=(//android.widget.EditText)[1]'</msg>
+<msg time="2025-07-03T18:08:30.721909" level="INFO">xpath criteria: (//android.widget.EditText)[1]</msg>
+<arg>${DEALER_CODE_FIELD}</arg>
+<arg>${DEALER_CODE}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-07-03T18:08:29.958344" elapsed="0.765088"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-07-03T18:08:30.726464" level="INFO">Clicking element 'xpath=(//android.widget.EditText)[2]'.</msg>
+<msg time="2025-07-03T18:08:31.490688" level="INFO">xpath criteria: (//android.widget.EditText)[2]</msg>
+<arg>${EMAIL_FIELD}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-07-03T18:08:30.724467" elapsed="0.768028"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-07-03T18:08:31.498062" level="INFO">Typing text 'admin@leadbox.ca' into text field 'xpath=(//android.widget.EditText)[2]'</msg>
+<msg time="2025-07-03T18:08:32.424618" level="INFO">xpath criteria: (//android.widget.EditText)[2]</msg>
+<arg>${EMAIL_FIELD}</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-07-03T18:08:31.492959" elapsed="0.932120"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-07-03T18:08:32.427045" level="INFO">Clicking element 'xpath=(//android.widget.EditText)[3]'.</msg>
+<msg time="2025-07-03T18:08:33.791155" level="INFO">xpath criteria: (//android.widget.EditText)[3]</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-07-03T18:08:32.425412" elapsed="1.366218"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-07-03T18:08:33.794906" level="INFO">Typing text 'may4thbe' into text field 'xpath=(//android.widget.EditText)[3]'</msg>
+<msg time="2025-07-03T18:08:34.744688" level="INFO">xpath criteria: (//android.widget.EditText)[3]</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-07-03T18:08:33.792035" elapsed="0.954800"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-07-03T18:08:34.752374" level="INFO">Clicking element 'xpath=(//android.widget.Button[@content-desc="Login"])'.</msg>
+<msg time="2025-07-03T18:08:35.938176" level="INFO">xpath criteria: (//android.widget.Button[@content-desc="Login"])</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-07-03T18:08:34.750665" elapsed="1.188109"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-03T18:08:46.002149" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-03T18:08:35.940904" elapsed="10.076139"/>
+</kw>
+<arg>${DEALER_CODE}</arg>
+<arg>${EMAIL}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-07-03T18:08:24.167525" elapsed="21.850323"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2025-07-03T18:08:46.118282" elapsed="16.434608"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2025-07-03T18:07:12.587831" elapsed="110.455115"/>
+</test>
+<status status="PASS" start="2025-07-03T18:07:11.182546" elapsed="114.523171"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Login</stat>
+</tag>
+<suite>
+<stat name="Case01-Login" id="s1" pass="1" fail="0" skip="0">Case01-Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

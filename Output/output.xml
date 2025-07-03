@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-07-03T16:02:01.319503" rpa="false" schemaversion="5">
+<suite id="s1" name="Case01-Login" source="C:\Users\melge\Documents\Mobile_RobotFramework\Scenario01-Login\Case01-Login.robot">
+<test id="s1-t1" name="Login With Valid Credentials" line="19">
+<kw name="Open App" owner="keywords" type="SETUP">
+<msg time="2025-07-03T16:02:01.870946" level="TRACE">Arguments: [  ]</msg>
+<kw name="Open Application" owner="AppiumLibrary">
+<msg time="2025-07-03T16:02:01.871556" level="TRACE">Arguments: [ 'http://127.0.0.1:4723/wd/hub' | 'platformName=Android platformVersion=14 deviceName=emulator-5554 appPackage=com.dev.leadbox appActivity=.MainActivity automationName=UiAutomator2' ]</msg>
+<msg time="2025-07-03T16:02:01.871895" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {}}}</msg>
+<msg time="2025-07-03T16:02:02.319556" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-07-03T16:02:02.430331" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session HTTP/1.1" 400 0</msg>
+<msg time="2025-07-03T16:02:02.430575" level="DEBUG">Remote response: status=400 | data={"value":{"error":"invalid argument","message":"'automationName' can't be blank; 'platformName' can't be blank","stacktrace":"InvalidArgumentError: 'automationName' can't be blank; 'platformName' can't be blank\n    at processCapabilities (C:\\Users\\melge\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\@appium\\base-driver\\lib\\basedriver\\capabilities.ts:338:13)\n    at parseCapsForInnerDriver (C:\\Users\\melge\\AppData\\Roaming\\npm\\node_modules\\appium\\lib\\utils.js:156:40)\n    at AppiumDriver.createSession (C:\\Users\\melge\\AppData\\Roaming\\npm\\node_modules\\appium\\lib\\appium.js:300:49)\n    at runCommandPromise (C:\\Users\\melge\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\@appium\\base-driver\\lib\\basedriver\\driver.ts:116:20)\n    at AppiumDriver.executeCommand (C:\\Users\\melge\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\@appium\\base-driver\\lib\\basedriver\\driver.ts:161:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at defaultBehavior (C:\\Users\\melge\\AppData\\Roaming\\npm\\node_modules\\appium\\lib\\appium.js:752:16)\n    at AppiumDriver.executeWrappedCommand (C:\\Users\\melge\\AppData\\Roaming\\npm\\node_modules\\appium\\lib\\appium.js:869:16)\n    at AppiumDriver.executeCommand (C:\\Users\\melge\\AppData\\Roaming\\npm\\node_modules\\appium\\lib\\appium.js:768:17)\n    at asyncHandler (C:\\Users\\melge\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\@appium\\base-driver\\lib\\protocol\\protocol.js:389:19)"}} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '1550', 'ETag': 'W/"60e-92VW9O0XyIB/TK9BbA2/Y3MlU4U"', 'Date': 'Thu, 03 Jul 2025 19:02:02 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-07-03T16:02:02.430651" level="DEBUG">Finished Request</msg>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2025-07-03T16:02:02.431039" level="TRACE">Arguments: [  ]</msg>
+<msg time="2025-07-03T16:02:02.431904" level="FAIL">No application is open</msg>
+<msg time="2025-07-03T16:02:02.442534" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 60, in open_application
+    application = webdriver.Remote(str(remote_url), options=desired_caps, strict_ssl=strict_ssl)
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\appium\webdriver\webdriver.py", line 229, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        command_executor=command_executor,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        options=options,
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 209, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\appium\webdriver\webdriver.py", line 321, in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: 'automationName' can't be blank; 'platformName' can't be blank
+Stacktrace:
+InvalidArgumentError: 'automationName' can't be blank; 'platformName' can't be blank
+    at processCapabilities (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\capabilities.ts:338:13)
+    at parseCapsForInnerDriver (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\utils.js:156:40)
+    at AppiumDriver.createSession (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:300:49)
+    at runCommandPromise (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:116:20)
+    at AppiumDriver.executeCommand (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:161:15)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at defaultBehavior (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:752:16)
+    at AppiumDriver.executeWrappedCommand (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:869:16)
+    at AppiumDriver.executeCommand (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:768:17)
+    at asyncHandler (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:389:19)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\_screenshot.py", line 34, in capture_page_screenshot
+    base64_screenshot = self._current_application().get_screenshot_as_base64()
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 469, in _current_application
+    raise RuntimeError('No application is open')
+RuntimeError: No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2025-07-03T16:02:02.430942" elapsed="0.011697">No application is open</status>
+</kw>
+<msg time="2025-07-03T16:02:02.443547" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2025-07-03T16:02:02.444446" level="FAIL">InvalidArgumentException: Message: 'automationName' can't be blank; 'platformName' can't be blank
+Stacktrace:
+InvalidArgumentError: 'automationName' can't be blank; 'platformName' can't be blank
+    at processCapabilities (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\capabilities.ts:338:13)
+    at parseCapsForInnerDriver (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\utils.js:156:40)
+    at AppiumDriver.createSession (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:300:49)
+    at runCommandPromise (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:116:20)
+    at AppiumDriver.executeCommand (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:161:15)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at defaultBehavior (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:752:16)
+    at AppiumDriver.executeWrappedCommand (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:869:16)
+    at AppiumDriver.executeCommand (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:768:17)
+    at asyncHandler (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:389:19)</msg>
+<msg time="2025-07-03T16:02:02.446219" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 60, in open_application
+    application = webdriver.Remote(str(remote_url), options=desired_caps, strict_ssl=strict_ssl)
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\appium\webdriver\webdriver.py", line 229, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        command_executor=command_executor,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        options=options,
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 209, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\appium\webdriver\webdriver.py", line 321, in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: 'automationName' can't be blank; 'platformName' can't be blank
+Stacktrace:
+InvalidArgumentError: 'automationName' can't be blank; 'platformName' can't be blank
+    at processCapabilities (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\capabilities.ts:338:13)
+    at parseCapsForInnerDriver (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\utils.js:156:40)
+    at AppiumDriver.createSession (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:300:49)
+    at runCommandPromise (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:116:20)
+    at AppiumDriver.executeCommand (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:161:15)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at defaultBehavior (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:752:16)
+    at AppiumDriver.executeWrappedCommand (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:869:16)
+    at AppiumDriver.executeCommand (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:768:17)
+    at asyncHandler (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:389:19)</msg>
+<arg>${APPIUM_SERVER}</arg>
+<arg>${CAPS}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="FAIL" start="2025-07-03T16:02:01.871410" elapsed="0.574891">InvalidArgumentException: Message: 'automationName' can't be blank; 'platformName' can't be blank
+Stacktrace:
+InvalidArgumentError: 'automationName' can't be blank; 'platformName' can't be blank
+    at processCapabilities (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\capabilities.ts:338:13)
+    at parseCapsForInnerDriver (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\utils.js:156:40)
+    at AppiumDriver.createSession (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:300:49)
+    at runCommandPromise (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:116:20)
+    at AppiumDriver.executeCommand (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:161:15)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at defaultBehavior (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:752:16)
+    at AppiumDriver.executeWrappedCommand (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:869:16)
+    at AppiumDriver.executeCommand (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:768:17)
+    at asyncHandler (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:389:19)</status>
+</kw>
+<status status="FAIL" start="2025-07-03T16:02:01.870224" elapsed="0.576333">InvalidArgumentException: Message: 'automationName' can't be blank; 'platformName' can't be blank
+Stacktrace:
+InvalidArgumentError: 'automationName' can't be blank; 'platformName' can't be blank
+    at processCapabilities (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\capabilities.ts:338:13)
+    at parseCapsForInnerDriver (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\utils.js:156:40)
+    at AppiumDriver.createSession (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:300:49)
+    at runCommandPromise (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:116:20)
+    at AppiumDriver.executeCommand (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:161:15)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at defaultBehavior (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:752:16)
+    at AppiumDriver.executeWrappedCommand (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:869:16)
+    at AppiumDriver.executeCommand (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:768:17)
+    at asyncHandler (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:389:19)</status>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
+<msg time="2025-07-03T16:02:02.447537" level="TRACE">Arguments: [  ]</msg>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2025-07-03T16:02:02.447794" level="TRACE">Arguments: [  ]</msg>
+<msg time="2025-07-03T16:02:02.447889" level="TRACE">Return: None</msg>
+<msg time="2025-07-03T16:02:02.447939" level="FAIL">No application is open</msg>
+<msg time="2025-07-03T16:02:02.449732" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 23, in close_application
+    self._debug('Closing application with session id %s' % self._current_application().session_id)
+                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 469, in _current_application
+    raise RuntimeError('No application is open')
+RuntimeError: No application is open
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\_screenshot.py", line 34, in capture_page_screenshot
+    base64_screenshot = self._current_application().get_screenshot_as_base64()
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 469, in _current_application
+    raise RuntimeError('No application is open')
+RuntimeError: No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2025-07-03T16:02:02.447743" elapsed="0.002044">No application is open</status>
+</kw>
+<msg time="2025-07-03T16:02:02.450765" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2025-07-03T16:02:02.451373" level="TRACE">Return: None</msg>
+<msg time="2025-07-03T16:02:02.451438" level="FAIL">No application is open</msg>
+<msg time="2025-07-03T16:02:02.452450" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 23, in close_application
+    self._debug('Closing application with session id %s' % self._current_application().session_id)
+                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\melge\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 469, in _current_application
+    raise RuntimeError('No application is open')
+RuntimeError: No application is open</msg>
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="FAIL" start="2025-07-03T16:02:02.447441" elapsed="0.005062">No application is open</status>
+</kw>
+<tag>Login</tag>
+<status status="FAIL" start="2025-07-03T16:02:01.869464" elapsed="0.583303">Setup failed:
+InvalidArgumentException: Message: 'automationName' can't be blank; 'platformName' can't be blank
+Stacktrace:
+InvalidArgumentError: 'automationName' can't be blank; 'platformName' can't be blank
+    at processCapabilities (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\capabilities.ts:338:13)
+    at parseCapsForInnerDriver (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\utils.js:156:40)
+    at AppiumDriver.createSession (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:300:49)
+    at runCommandPromise (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:116:20)
+    at AppiumDriver.executeCommand (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:161:15)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at defaultBehavior (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:752:16)
+    at AppiumDriver.executeWrappedCommand (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:869:16)
+    at AppiumDriver.executeCommand (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\lib\appium.js:768:17)
+    at asyncHandler (C:\Users\melge\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:389:19)
+
+Also teardown failed:
+No application is open</status>
+</test>
+<status status="FAIL" start="2025-07-03T16:02:01.321264" elapsed="1.134886"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Login</stat>
+</tag>
+<suite>
+<stat name="Case01-Login" id="s1" pass="0" fail="1" skip="0">Case01-Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-07-03T16:02:02.443547" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2025-07-03T16:02:02.450765" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>
