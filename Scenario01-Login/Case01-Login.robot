@@ -7,8 +7,8 @@ Resource  ./global-resources/keywords.robot
 Resource  ./global-resources/variables.robot
 
 
-Resource  resources/keywords.robot
-Resource  resources/variables.robot
+Resource  resources/keywordsCase01.robot
+Resource  resources/variablesCase01.robot
 
 
 Test Setup    Open App

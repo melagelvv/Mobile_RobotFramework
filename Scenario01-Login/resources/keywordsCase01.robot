@@ -18,4 +18,4 @@ Fill Login Fields
     Click Element    ${PASSWORD_FIELD}
     Input Text    ${PASSWORD_FIELD}    ${PASSWORD}
     Click Element    ${LOGIN_BUTTON}
-    Sleep    10s
+    Sleep    20s
